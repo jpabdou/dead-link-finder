@@ -21,14 +21,14 @@ async function linkCrawl() {
     const targets = await getFiles()
 
     let links = (await Promise.all(targets.map(async (file) => {
-                            // console.log(`"file ran ${file}"`)
-                            const data = fs.readFileSync(file, 'utf8');
-                            let regex = /https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9(]{1,6}\b(?:[-a-zA-Z0-9(@:%_\+.~#?&\/=]*)/g
-                            all_links = Array.from(data.matchAll(regex), (m) => m[0])
-                            return all_links
-                        
-                            })))
-                 
+        // console.log(`"file ran ${file}"`)
+        const data = fs.readFileSync(file, 'utf8');
+        let regex = /https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9(]{1,6}\b(?:[-a-zA-Z0-9(@:%_\+.~#?&\/=]*)/g
+        all_links = Array.from(data.matchAll(regex), (m) => m[0])
+        return all_links
+    
+        })))
+
     links = links.flat()
 
     const checkLink = async (link) => {
