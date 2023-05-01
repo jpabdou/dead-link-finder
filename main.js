@@ -38,8 +38,6 @@ async function linkCrawl() {
             return link;
           }
         } catch (error) {
-            if (link.includes("next-auth.js.org") || link.includes("vercel.com"))
-                {console.log(error.response)}
           return link;
         }
       }
