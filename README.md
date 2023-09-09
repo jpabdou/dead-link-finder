@@ -1,6 +1,6 @@
 This script I made to search for dead links in the markdown files within a project repository directory. 
 
-To run the script, add the repository folder to the root of the dead-link-finder directory and input `npm install` in Terminal to install dependencies. 
+To run the script, add the repository folder to the root of the dead-link-finder directory and enter `npm install` in Terminal to install dependencies. 
 
 Then, start the script by entering `npm start` in Terminal at the root of the dead-link-finder directory. 
 
